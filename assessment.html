@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Health Self-Assessment (PHQ-4) | Shape Your Mind Consult</title>
+  <meta name="description" content="Take our free, confidential 60-second mental health assessment (PHQ-4) to screen for anxiety and depression. Get immediate clinical feedback and guidance from ShapeUrMind.">
+  <link rel="canonical" href="https://shapeurmind.org/assessment.html">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="images/logo-official.png">
+</head>
+<body>
+
+  <!-- Top Hotline Bar -->
+  <aside class="crisis-topbar" aria-label="Emergency and Contact notice">
+    <div class="container">
+      <div class="topbar-left">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        <span><strong>24/7 Crisis & Support Helpline:</strong> Immediate intervention available.</span>
+      </div>
+      <div class="topbar-right">
+        <a href="tel:+2348060028943" class="topbar-link">
+          <i data-lucide="phone" style="width: 14px; height: 14px;"></i>
+          <span>+234 806 002 8943</span>
+        </a>
+        <a href="https://wa.me/2348060028943" target="_blank" class="topbar-link">
+          <i data-lucide="message-circle" style="width: 14px; height: 14px;"></i>
+          <span>WhatsApp Chat</span>
+        </a>
+        <span class="topbar-badge">Telehealth & In-Person</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <!-- Brand Logo with Extracted Official Emblem -->
+      <a href="index.html" class="brand-logo" aria-label="Shape Your Mind Consult Home">
+        <img src="images/logo-official.png?v=3" alt="Shape Your Mind Consult Official Logo" class="brand-img">
+        <div class="brand-text">
+          <span class="brand-title">Shape<span>UrMind</span></span>
+          <span class="brand-subtitle">Shape Your Mind Consult</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu (Exact original shapeurmind.org menu hierarchy) -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+
+          <!-- Who We Are Dropdown -->
+          <li class="has-dropdown">
+            <a href="about.html" class="nav-link dropdown-toggle">
+              <span>Who We Are</span>
+              <i data-lucide="chevron-down" style="width: 14px; height: 14px;"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="about.html" class="dropdown-link">
+                  <i data-lucide="users-round" style="width: 15px; height: 15px;"></i>
+                  <span>About Us</span>
+                </a>
+              </li>
+              <li>
+                <a href="services.html" class="dropdown-link">
+                  <i data-lucide="sparkles" style="width: 15px; height: 15px;"></i>
+                  <span>Services</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Contact us Dropdown -->
+          <li class="has-dropdown">
+            <a href="contact.html" class="nav-link dropdown-toggle">
+              <span>Contact us</span>
+              <i data-lucide="chevron-down" style="width: 14px; height: 14px;"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="contact.html" class="dropdown-link">
+                  <i data-lucide="mail" style="width: 15px; height: 15px;"></i>
+                  <span>Contact us</span>
+                </a>
+              </li>
+              <li>
+                <a href="appointment.html" class="dropdown-link">
+                  <i data-lucide="calendar" style="width: 15px; height: 15px;"></i>
+                  <span>Appointment</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Blog -->
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons (Original Site CTA: Consultations & Call) -->
+      <div class="nav-actions">
+        <a href="tel:+2348060028943" class="btn btn-soft btn-sm" title="Call Expert">
+          <i data-lucide="phone-call" style="width: 15px; height: 15px;"></i>
+          <span>Call Expert</span>
+        </a>
+        <a href="appointment.html" class="btn btn-primary btn-sm">
+          <i data-lucide="message-square" style="width: 15px; height: 15px;"></i>
+          <span>Consultations</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <i data-lucide="menu" style="width: 28px; height: 28px;"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="separator">/</span>
+        <span class="current">Self-Assessment Screener</span>
+      </div>
+      <h1 class="page-banner-title">Check In With Your Emotional Well-Being</h1>
+      <p class="page-banner-subtitle">
+        Self-awareness is the crucial first milestone toward mental equilibrium. Take our anonymous, 60-second PHQ-4 screener to gauge your current anxiety and stress levels.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Screener Section -->
+  <main class="section-padding">
+    <div class="container">
+      <div class="assessment-container" id="assessmentContainer">
+        <div class="assessment-header">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <h3>Patient Health Questionnaire (PHQ-4)</h3>
+              <p>Over the last 2 weeks, how often have you been bothered by any of the following problems?</p>
+            </div>
+            <span id="assessmentStepIndicator" style="font-size: 0.82rem; font-weight: 700; background: rgba(255,255,255,0.2); padding: 0.35rem 0.8rem; border-radius: 99px;">
+              Question 1 of 4
+            </span>
+          </div>
+        </div>
+
+        <div class="assessment-body">
+          <div class="progress-track">
+            <div class="progress-fill" id="assessmentProgressFill"></div>
+          </div>
+
+          <div id="assessmentBody">
+            <!-- Dynamically populated by js/app.js -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Somatic Mindful Breathing Tool -->
+      <div class="breathing-card" style="margin-top: 5rem;">
+        <span class="topbar-badge" style="margin-bottom: 0.5rem; display: inline-block;">Quick Reset Tool</span>
+        <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem;">Ground Yourself in 60 Seconds</h3>
+        <p style="font-size: 0.95rem; opacity: 0.85; max-width: 500px; margin: 0 auto;">
+          Follow the expanding and contracting circle. Inhale deeply, hold with ease, and exhale slowly to calm racing thoughts.
+        </p>
+
+        <div class="breathing-circle-wrap">
+          <div class="breathing-circle-outer" id="breathingCircle"></div>
+          <div class="breathing-circle-inner" id="breathingTimerDisplay">60s</div>
+        </div>
+
+        <div class="breathing-instruction" id="breathingText">Press start to begin your 1-minute calming breath.</div>
+
+        <div style="margin-top: 1.5rem;">
+          <button type="button" class="btn btn-accent" id="startBreathingBtn">
+            <i data-lucide="play"></i>
+            <span>Start 1-Min Calming Breath</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Scientific Scoring Explainer Table -->
+      <div style="margin-top: 5rem; background: white; padding: 3rem 2.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+        <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--color-primary-dark); margin-bottom: 1rem;">
+          Understanding Your PHQ-4 Screening Results
+        </h3>
+        <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 2rem;">
+          The Patient Health Questionnaire-4 (PHQ-4) is an ultra-brief, validated screening tool consisting of a 2-item anxiety scale (GAD-2) and a 2-item depression scale (PHQ-2). Here is how psychologists interpret cumulative scores:
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
+          <div style="background: #ecfdf5; padding: 1.5rem; border-radius: var(--radius-md); border-top: 4px solid #10b981;">
+            <h4 style="font-size: 1.15rem; font-weight: 700; color: #047857; margin-bottom: 0.35rem;">0 – 2 Points</h4>
+            <h5 style="font-size: 0.85rem; font-weight: 700; color: #065f46; margin-bottom: 0.5rem;">Normal / Minimal</h5>
+            <p style="font-size: 0.8rem; color: #064e3b; line-height: 1.5;">
+              Suggests healthy emotional balance. Maintain active rest, quality sleep, and regular mindfulness habits.
+            </p>
+          </div>
+
+          <div style="background: #fefce8; padding: 1.5rem; border-radius: var(--radius-md); border-top: 4px solid #facc15;">
+            <h4 style="font-size: 1.15rem; font-weight: 700; color: #a16207; margin-bottom: 0.35rem;">3 – 5 Points</h4>
+            <h5 style="font-size: 0.85rem; font-weight: 700; color: #854d0e; margin-bottom: 0.5rem;">Mild Psychological Strain</h5>
+            <p style="font-size: 0.8rem; color: #713f12; line-height: 1.5;">
+              Noticeable tension or brief blues. Recommended to re-evaluate boundaries, exercise, and consider a wellness check-in.
+            </p>
+          </div>
+
+          <div style="background: #fff7ed; padding: 1.5rem; border-radius: var(--radius-md); border-top: 4px solid #fb923c;">
+            <h4 style="font-size: 1.15rem; font-weight: 700; color: #c2410c; margin-bottom: 0.35rem;">6 – 8 Points</h4>
+            <h5 style="font-size: 0.85rem; font-weight: 700; color: #9a3412; margin-bottom: 0.5rem;">Moderate Symptoms</h5>
+            <p style="font-size: 0.8rem; color: #7c2d12; line-height: 1.5;">
+              Symptoms begin to interfere with daily focus and relationships. Consultation with a licensed counselor is strongly advised.
+            </p>
+          </div>
+
+          <div style="background: #fef2f2; padding: 1.5rem; border-radius: var(--radius-md); border-top: 4px solid #ef4444;">
+            <h4 style="font-size: 1.15rem; font-weight: 700; color: #b91c1c; margin-bottom: 0.35rem;">9 – 12 Points</h4>
+            <h5 style="font-size: 0.85rem; font-weight: 700; color: #991b1b; margin-bottom: 0.5rem;">Severe Emotional Distress</h5>
+            <p style="font-size: 0.8rem; color: #7f1d1d; line-height: 1.5;">
+              Significant psychological burden. Prioritize booking an immediate clinical consultation or contacting our crisis support desk.
+            </p>
+          </div>
+        </div>
+
+        <div style="margin-top: 2rem; padding: 1.25rem; background: var(--bg-surface); border-radius: var(--radius-md); font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">
+          <strong>Clinical Note:</strong> A screening questionnaire cannot replace a professional diagnostic evaluation. If you desire an in-depth clinical diagnosis (e.g. for ADHD, Major Depressive Disorder, or Anxiety Disorders), schedule a <em>Comprehensive Diagnostic Assessment</em> with our clinical psychologists.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="color: white;">
+            <img src="images/logo-official.png?v=3" alt="Shape Your Mind Consult Official Logo" class="brand-img">
+            <div class="brand-text">
+              <span class="brand-title" style="color: white;">Shape<span style="color: #e09f67;">UrMind</span></span>
+              <span class="brand-subtitle" style="color: #baa087;">Shape Your Mind Consult</span>
+            </div>
+          </a>
+          <p>
+            Shape Your Mind Consult (shapeurmind.org) provides certified individual therapy, comprehensive diagnostic evaluations, and corporate mental wellness solutions.
+          </p>
+          <div class="footer-socials">
+            <a href="https://wa.me/2348060028943" class="social-icon-btn" aria-label="WhatsApp"><i data-lucide="message-circle" style="width: 18px; height: 18px;"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon-btn" aria-label="LinkedIn"><i data-lucide="linkedin" style="width: 18px; height: 18px;"></i></a>
+            <a href="https://instagram.com" target="_blank" class="social-icon-btn" aria-label="Instagram"><i data-lucide="instagram" style="width: 18px; height: 18px;"></i></a>
+            <a href="https://twitter.com" target="_blank" class="social-icon-btn" aria-label="Twitter"><i data-lucide="twitter" style="width: 18px; height: 18px;"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#individual">Individual Counseling</a></li>
+            <li><a href="services.html#diagnostic">Diagnostic Assessments</a></li>
+            <li><a href="corporate.html">Corporate EAPs</a></li>
+            <li><a href="services.html#child">Child & Adolescent Support</a></li>
+            <li><a href="services.html#crisis">Crisis Intervention</a></li>
+            <li><a href="services.html#capacity">Workshops & Seminars</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Our Team</a></li>
+            <li><a href="assessment.html">PHQ-4 Self-Assessment</a></li>
+            <li><a href="book.html">Book an Appointment</a></li>
+            <li><a href="blog.html">Mental Health Blog</a></li>
+            <li><a href="about.html#faq">Frequently Asked Questions</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Monthly Wellness Digest</h4>
+          <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.75rem;">
+            Join 8,000+ subscribers receiving science-backed mental health tips, mindful reflections, and workshop announcements.
+          </p>
+          <form id="newsletterForm">
+            <div class="newsletter-box">
+              <input type="email" name="email" placeholder="Your email address" required>
+              <button type="submit" class="btn btn-accent btn-sm" style="padding: 0.4rem 1rem;">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer-box">
+        <i data-lucide="alert-octagon" style="width: 28px; height: 28px; flex-shrink: 0;"></i>
+        <div>
+          <strong>Medical & Emergency Disclaimer:</strong> If you are experiencing a life-threatening psychological emergency, acute suicidal distress, or are in immediate danger of self-harm, please dial our emergency helpline <strong>+234 806 002 8943</strong> or proceed immediately to the nearest hospital emergency department.
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Shape Your Mind Consult (shapeurmind.org). All Rights Reserved.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="index.html">Privacy Policy</a>
+          <a href="index.html">Terms of Service</a>
+          <a href="about.html">Clinical Ethics Statement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/2348060028943" target="_blank" class="floating-support-btn" aria-label="WhatsApp Contact">
+    <i data-lucide="message-circle" style="width: 30px; height: 30px;"></i>
+  </a>
+
+  <script>
+    if (window.lucide) window.lucide.createIcons();
+  </script>
+  <script src="js/app.js"></script>
+</body>
+</html>
