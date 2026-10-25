@@ -2418,3 +2418,128 @@ button, input, select, textarea {
 .article-rich-text li {
   margin-bottom: 0.5rem;
 }
+
+/* Responsive layout: shrinkable tracks, readable content, and touch navigation. */
+:where(.hero-grid, .about-grid, .services-grid, .team-grid, .corporate-grid,
+  .booking-wrapper, .contact-grid, .footer-top-grid, .form-row, .blog-grid,
+  .testimonials-grid, .clinic-grid, .pricing-grid, .responsive-grid,
+  .featured-article, .service-full-card) > * { min-width: 0; }
+.responsive-grid { display: grid; }
+.columns-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.columns-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.columns-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.featured-article { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); background: white; border: 1px solid var(--border-light); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); margin-bottom: 3.5rem; }
+.featured-article-image { position: relative; min-height: 420px; }
+.featured-article-content { padding: 3rem 2.5rem; display: flex; flex-direction: column; justify-content: center; }
+.corporate-showcase { margin-top: 5rem; border-radius: var(--radius-lg); overflow: hidden; position: relative; box-shadow: var(--shadow-lg); }
+.corporate-showcase > img { position: absolute; inset: 0; }
+.corporate-showcase-content { position: relative; min-height: 380px; background: linear-gradient(to right, rgba(88,29,59,.92), rgba(88,29,59,.65)); display: flex; flex-direction: column; justify-content: center; padding: 3rem 4rem; color: white; }
+.btn { max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
+.btn svg, .hero-badge svg, .pulse-dot { flex-shrink: 0; }
+.newsletter-box input, #newsletterForm input { min-width: 0; }
+.contact-item > div, .clinic-detail-item > div { min-width: 0; overflow-wrap: anywhere; }
+.blog-meta, .breadcrumbs { flex-wrap: wrap; }
+:where(a, button, input, select, textarea):focus-visible { outline: 3px solid var(--color-secondary); outline-offset: 3px; }
+
+@media (max-width: 1100px) {
+  .nav-menu { gap: 1rem; }
+  .nav-actions { gap: .5rem; }
+  .nav-actions .btn { padding-inline: .85rem; }
+}
+@media (max-width: 1024px) {
+  .mobile-toggle { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex-shrink: 0; }
+  .nav-actions { display: none; }
+  .navbar nav { position: absolute; top: 100%; left: 0; right: 0; }
+  .nav-menu { position: static; width: 100%; background: white; flex-direction: column; align-items: stretch; padding: 1rem 1.5rem 1.5rem; gap: .25rem; box-shadow: var(--shadow-lg); transform: none; display: none; max-height: calc(100dvh - 74px); overflow-y: auto; overscroll-behavior: contain; }
+  .nav-menu.open { display: flex; transform: none; }
+  .nav-link { display: flex; align-items: center; min-height: 44px; }
+  .has-dropdown .dropdown-menu { position: static; min-width: 0; opacity: 1; visibility: visible; pointer-events: auto; box-shadow: none; border: none; padding: .25rem .5rem; transform: none; background: var(--bg-surface); margin: 0 0 .5rem; }
+  .has-dropdown .dropdown-menu::before { display: none; }
+  .dropdown-link { min-height: 44px; }
+  .has-dropdown:hover .dropdown-toggle svg { transform: none; }
+  .about-grid, .contact-grid { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
+  .hero-grid, .booking-wrapper, .corporate-grid { grid-template-columns: minmax(0, 1fr); }
+  .hero-visual { width: 100%; }
+  .featured-article { grid-template-columns: minmax(0, 1fr); }
+  .featured-article-image { min-height: 0; height: 320px; }
+  .columns-3, .columns-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .service-full-card.reverse .service-full-image-wrap { order: 0; }
+  .service-full-card.reverse .service-full-content { order: 1; }
+}
+@media (max-width: 768px) {
+  .container { padding-inline: 1.25rem; }
+  .section-padding { padding-block: 3.5rem; }
+  .section-header { margin-bottom: 2rem; }
+  .hero-section { padding: 2.5rem 0 3.5rem; }
+  .hero-grid { gap: 2rem; }
+  .hero-title { font-size: clamp(1.85rem, 7.7vw, 2.65rem); line-height: 1.17; }
+  .hero-description, .page-banner-subtitle, .section-subtitle { font-size: 1rem; }
+  .hero-badge { font-size: .75rem; line-height: 1.5; padding: .5rem .75rem; }
+  .hero-cta-group { flex-direction: column; align-items: stretch; margin-bottom: 1.75rem; gap: .75rem; }
+  .hero-cta-group .btn { width: 100%; }
+  .hero-trust-metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; align-items: start; }
+  .metric-number { font-size: 1.4rem; }
+  .metric-label { font-size: .75rem; }
+  .hero-image { height: 300px; }
+  .crisis-topbar { font-size: .75rem; }
+  .crisis-topbar .container { gap: .5rem; }
+  .topbar-left { align-items: baseline; gap: .5rem; }
+  .topbar-left .pulse-dot { align-self: center; }
+  .topbar-right { flex-wrap: wrap; gap: .5rem 1rem; width: 100%; }
+  .topbar-link { white-space: nowrap; min-height: 32px; }
+  .topbar-badge { font-size: .7rem; }
+  .topbar-right .topbar-badge { display: none; }
+  .nav-container { height: 68px; }
+  .nav-menu { max-height: calc(100dvh - 68px); }
+  .brand-logo { gap: .5rem; font-size: 1.15rem; }
+  .brand-logo img.brand-img { width: 40px; height: 40px; }
+  .brand-subtitle { font-size: .56rem; }
+  .page-banner { padding: 2.5rem 0; }
+  .page-banner-title, .section-title { font-size: clamp(1.7rem, 6.5vw, 2.2rem); }
+  .columns-2, .columns-3, .columns-4, .team-grid, .footer-top-grid { grid-template-columns: minmax(0, 1fr); }
+  .responsive-grid { gap: 1.25rem !important; }
+  .responsive-grid > div { padding: 1.5rem !important; }
+  .wellness-ribbon { margin-top: -1.5rem; padding: 1.25rem; }
+  .ribbon-item { gap: .85rem; }
+  .ribbon-text { min-width: 0; }
+  .ribbon-text h4 { font-size: 1rem; }
+  .assessment-header, .assessment-body, .booking-info-panel, .booking-form-panel,
+  .contact-card-info, .contact-form-card, .service-full-content,
+  .clinic-card-header, .clinic-card-body, .pricing-card,
+  .featured-article-content, .modal-content-area { padding: 1.5rem; }
+  .assessment-header h3 { font-size: 1.2rem; }
+  .form-control { min-width: 0; font-size: 16px; }
+  .service-full-image-wrap { min-height: 0; height: 240px; }
+  .service-full-content h3 { overflow-wrap: anywhere; }
+  .service-card-action { gap: .75rem; flex-wrap: wrap; }
+  .pricing-card.featured { transform: none; }
+  .contact-item { gap: .75rem; }
+  .contact-icon-box { width: 40px; height: 40px; }
+  .corporate-banner { padding: 2rem 1.5rem; }
+  .corporate-banner h3, .corporate-showcase h3 { font-size: 1.7rem !important; }
+  .corporate-stats-row { flex-wrap: wrap; gap: 1.25rem; }
+  .corporate-showcase-content { padding: 2rem 1.5rem; }
+  .featured-article-image { height: 240px; }
+  .collage-main { width: 100%; height: 320px; }
+  .collage-badge { position: relative; right: auto; bottom: auto; margin: -2rem 1rem 0 auto; padding: 1rem; }
+  .step-circle-item { flex: 1; padding-inline: .25rem; }
+  .step-label { font-size: .7rem; }
+  .footer { padding-top: 3rem; padding-bottom: 5.5rem; }
+  .footer-top-grid { gap: 2rem; padding-bottom: 2rem; }
+  .footer-disclaimer-box { align-items: flex-start; }
+  .footer-bottom > div { flex-wrap: wrap; gap: .75rem !important; }
+  .footer-links a { display: inline-block; padding-block: .25rem; }
+  .newsletter-box .btn { flex-shrink: 0; }
+  .faq-question { padding: 1.15rem; gap: 1rem; }
+  .faq-answer { padding-inline: 1.15rem; }
+  .faq-item.open .faq-answer { padding: 0 1.15rem 1.15rem; }
+  .modal-box { max-height: calc(100dvh - 2rem); }
+  .modal-close-btn { top: .5rem; right: .5rem; }
+  .modal-content-area { padding-top: 3rem; }
+  .floating-support-btn { width: 48px; height: 48px; right: 1rem; bottom: max(1rem, env(safe-area-inset-bottom)); }
+  .toast-notice { left: 1rem; right: 1rem; bottom: 5rem; padding: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
