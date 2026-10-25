@@ -2481,18 +2481,19 @@ button, input, select, textarea {
   .metric-number { font-size: 1.4rem; }
   .metric-label { font-size: .75rem; }
   .hero-image { height: 300px; }
-  .crisis-topbar { font-size: .75rem; }
-  .crisis-topbar .container { gap: .5rem; }
+  .crisis-topbar { font-size: .7rem; padding-block: .125rem; }
+  .crisis-topbar .container { gap: 0; }
+  .crisis-topbar .topbar-left { display: none; }
   .topbar-left { align-items: baseline; gap: .5rem; }
   .topbar-left .pulse-dot { align-self: center; }
-  .topbar-right { flex-wrap: wrap; gap: .5rem 1rem; width: 100%; }
+  .topbar-right { flex-wrap: nowrap; justify-content: space-between; gap: .75rem; width: 100%; }
   .topbar-link { white-space: nowrap; min-height: 32px; }
   .topbar-badge { font-size: .7rem; }
   .topbar-right .topbar-badge { display: none; }
-  .nav-container { height: 68px; }
-  .nav-menu { max-height: calc(100dvh - 68px); }
+  .nav-container { height: 56px; }
+  .nav-menu { max-height: calc(100dvh - 56px); }
   .brand-logo { gap: .5rem; font-size: 1.15rem; }
-  .brand-logo img.brand-img { width: 40px; height: 40px; }
+  .navbar .brand-logo img.brand-img { width: 34px; height: 34px; }
   .brand-subtitle { font-size: .56rem; }
   .page-banner { padding: 2.5rem 0; }
   .page-banner-title, .section-title { font-size: clamp(1.7rem, 6.5vw, 2.2rem); }
