@@ -5,3 +5,11 @@ node_modules
 Thumbs.db
 __pycache__/
 *.pyc
+
+studio/dist/
+studio/.sanity/
+.env
+.env.*
+
+migration/extracted/
+migration/reports/

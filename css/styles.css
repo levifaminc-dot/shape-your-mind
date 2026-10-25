@@ -2544,3 +2544,8 @@ button, input, select, textarea {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+.blog-read-link { background: transparent; text-align: left; cursor: pointer; }
+.article-rich-text figure { margin-block: 1.5rem; }
+.article-rich-text figcaption { font-size: .85rem; color: var(--text-muted); margin-top: .5rem; }
+.article-rich-text a { text-decoration: underline; color: var(--color-primary); }

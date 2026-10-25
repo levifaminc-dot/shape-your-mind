@@ -32,8 +32,29 @@
     }
   ],
   "rewrites": [
-    { "source": "/about-us", "destination": "/about.html" },
-    { "source": "/contact-us", "destination": "/contact.html" },
-    { "source": "/book", "destination": "/appointment.html" }
+    {
+      "source": "/about-us",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/book",
+      "destination": "/appointment.html"
+    }
+  ],
+  "redirects": [
+    {
+      "destination": "https://shapeurmind.sanity.studio/",
+      "source": "/studio",
+      "permanent": false
+    },
+    {
+      "destination": "https://shapeurmind.sanity.studio/:path*",
+      "source": "/studio/:path*",
+      "permanent": false
+    }
   ]
 }

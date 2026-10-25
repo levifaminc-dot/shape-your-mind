@@ -98,3 +98,8 @@ The local development server is active:
 👉 **`http://127.0.0.1:8080`**
 
 Every page and asset can also be loaded directly in any modern browser without dependencies or builds required.
+
+## Content management
+
+Open https://www.shapeurmind.org/studio to manage published website content. The standalone editor is hosted at https://shapeurmind.sanity.studio and its source lives in studio/. Read studio/README.md for local development and studio/CONTENT-IMPORT.md for the initial content mapping. Publishing an entry updates the website through Sanity's public content API; no GitHub commit or manual redeployment is needed for content changes. Drafts remain visible only to authorized editors. Contact email settings change displayed links; form delivery routing is managed separately in Web3Forms.
+

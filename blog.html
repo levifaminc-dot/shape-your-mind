@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="css/styles.css?v=20261025-mobile2">
+  <link rel="stylesheet" href="css/styles.css?v=20261025-studio">
   <link rel="icon" type="image/png" href="images/logo-official.png">
 </head>
 <body>
@@ -182,7 +182,7 @@
       </div>
 
       <!-- Category Filter Tabs -->
-      <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2.5rem; align-items: center;">
+      <div class="blog-filters" style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2.5rem; align-items: center;">
         <span style="font-size: 0.88rem; font-weight: 700; color: var(--color-primary-dark); margin-right: 0.5rem;">Filter Topics:</span>
         <button type="button" class="btn btn-sm btn-primary blog-filter-btn active" data-filter="all" style="border-radius: 99px;">All (8)</button>
         <button type="button" class="btn btn-sm btn-soft blog-filter-btn" data-filter="Training" style="border-radius: 99px;">Clinical Training (2)</button>
@@ -196,7 +196,7 @@
       <!-- Articles Grid -->
       <div class="section-header" style="margin-bottom: 2.5rem;">
         <span class="section-tag">All Shape Your Mind Publications</span>
-        <h3 style="font-size: 2rem; font-weight: 800; color: var(--color-primary-dark);">Explore All 8 Authentic Clinical Articles & Field Updates</h3>
+        <h3 id="blogCollectionTitle" style="font-size: 2rem; font-weight: 800; color: var(--color-primary-dark);">Explore All 8 Authentic Clinical Articles & Field Updates</h3>
       </div>
 
       <div class="blog-grid">
@@ -551,6 +551,7 @@
   <script>
     if (window.lucide) window.lucide.createIcons();
   </script>
-  <script src="js/app.js?v=20261025-mobile"></script>
+  <script src="js/app.js?v=20261025-studio"></script>
+  <script src="js/cms.js?v=20261025-studio"></script>
 </body>
 </html>

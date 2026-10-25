@@ -1,0 +1,29 @@
+{
+  "name": "shapeurmind-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "check": "tsc --noEmit",
+    "deploy": "sanity deploy",
+    "schema:deploy": "sanity schema deploy",
+    "test": "node --test cms.test.mjs"
+  },
+  "dependencies": {
+    "@sanity/icons": "^5.2.3",
+    "react": "^19.2.2",
+    "react-dom": "^19.2.2",
+    "sanity": "^6.20.0",
+    "styled-components": "^6.1.15"
+  },
+  "devDependencies": {
+    "@portabletext/block-tools": "^6.0.5",
+    "@sanity/client": "^8.11.0",
+    "@sanity/schema": "^6.20.0",
+    "@types/react": "^19.2.0",
+    "jsdom": "^30.1.3",
+    "typescript": "^5.9.3"
+  }
+}

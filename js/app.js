@@ -954,7 +954,7 @@ function initBlogReader() {
 
   // Category filter buttons on blog.html
   const filterBtns = document.querySelectorAll('.blog-filter-btn');
-  const blogCards = document.querySelectorAll('.blog-grid .blog-card');
+
   
   if (filterBtns.length > 0) {
     filterBtns.forEach(btn => {
@@ -963,7 +963,7 @@ function initBlogReader() {
         btn.classList.add('active');
         const filter = btn.getAttribute('data-filter');
 
-        blogCards.forEach(card => {
+        document.querySelectorAll('.blog-grid .blog-card').forEach(card => {
           const cardCat = card.getAttribute('data-category');
           if (filter === 'all' || cardCat.toLowerCase().includes(filter.toLowerCase())) {
             card.style.display = 'flex';
