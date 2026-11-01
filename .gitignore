@@ -13,3 +13,6 @@ studio/.sanity/
 
 migration/extracted/
 migration/reports/
+
+studio/test-results/
+studio/playwright-report/

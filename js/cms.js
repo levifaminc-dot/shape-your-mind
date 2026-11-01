@@ -82,8 +82,9 @@
       current.pathname = '/' + settings.whatsapp.replace(/\D/g, ''); link.href = current.href;
     });
     for (const social of settings.socialLinks || []) {
+      if (!['Twitter', 'LinkedIn', 'Instagram'].includes(social.platform)) continue;
       const url = safeUrl(social.url);
-      if (url) document.querySelectorAll(`.social-icon-btn[aria-label="${social.platform === 'Twitter' ? 'Twitter' : social.platform === 'LinkedIn' ? 'LinkedIn' : 'Instagram'}"]`).forEach((link) => { link.href = url; });
+      if (url.startsWith('https:')) document.querySelectorAll(`.social-icon-btn[aria-label="${social.platform}"]`).forEach((link) => { link.href = url; });
     }
   }
   function applyHome(home) {
@@ -115,11 +116,18 @@
   function applyServices(services) {
     if (!services?.length) return;
     const cards = document.querySelectorAll('.services-grid .service-card');
-    services.forEach((service, index) => {
-      const card = cards[index];
+    services.forEach((service) => {
+      // Published order and partial collections must not change a card's identity.
+      const card = [...cards].find((item) => item.dataset.serviceSlug === service.slug);
       if (card) {
         if (service.title) card.querySelector('.service-title').textContent = service.title;
         if (service.summary) card.querySelector('.service-description').textContent = service.summary;
+      }
+      if (typeof serviceData !== 'undefined' && Object.hasOwn(serviceData, service.slug)) {
+        const data = serviceData[service.slug];
+        if (service.title) data.title = service.title;
+        if (service.description) data.desc = service.description;
+        if (service.features?.length) data.highlights = service.features;
       }
       const detail = [...document.querySelectorAll('.service-full-card')].find((el) => el.id === service.slug);
       if (detail) {
