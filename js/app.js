@@ -430,6 +430,7 @@ function initServiceFilters() {
 }
 
 window.viewServiceDetails = function(serviceKey) {
+  const escape = (value) => String(value ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const data = serviceData[serviceKey];
   if (!data) return;
 
@@ -437,25 +438,25 @@ window.viewServiceDetails = function(serviceKey) {
   if (!modalBody) return;
 
   modalBody.innerHTML = `
-    <span class="topbar-badge" style="display: inline-block; margin-bottom: 0.75rem;">${data.category}</span>
-    <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--color-primary-dark); margin-bottom: 0.5rem;">${data.title}</h3>
+    <span class="topbar-badge" style="display: inline-block; margin-bottom: 0.75rem;">${escape(data.category)}</span>
+    <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--color-primary-dark); margin-bottom: 0.5rem;">${escape(data.title)}</h3>
     <div style="display: flex; gap: 1.25rem; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">
-      <span><strong>Duration:</strong> ${data.duration}</span>
-      <span><strong>Format:</strong> ${data.format}</span>
+      <span><strong>Duration:</strong> ${escape(data.duration)}</span>
+      <span><strong>Format:</strong> ${escape(data.format)}</span>
     </div>
-    <p style="font-size: 0.95rem; line-height: 1.65; color: var(--text-main); margin-bottom: 1.5rem;">${data.desc}</p>
+    <p style="font-size: 0.95rem; line-height: 1.65; color: var(--text-main); margin-bottom: 1.5rem;">${escape(data.desc)}</p>
     
     <h5 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-primary-dark);">Key Clinical Highlights:</h5>
     <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 2rem;">
       ${data.highlights.map(h => `
         <li style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.88rem; color: var(--text-main);">
-          <span style="color: var(--color-secondary); font-weight: bold;">✓</span> ${h}
+          <span style="color: var(--color-secondary); font-weight: bold;">✓</span> ${escape(h)}
         </li>
       `).join('')}
     </ul>
 
     <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-      <button type="button" class="btn btn-primary" onclick="closeModal('serviceModal'); openBookingModal('${data.title}')">
+      <button type="button" class="btn btn-primary" data-service-booking>
         Schedule This Service
       </button>
       <a href="tel:+2348060028943" class="btn btn-outline">
@@ -464,6 +465,10 @@ window.viewServiceDetails = function(serviceKey) {
     </div>
   `;
 
+  modalBody.querySelector('[data-service-booking]').addEventListener('click', () => {
+    closeModal('serviceModal');
+    openBookingModal(data.title);
+  });
   openModal('serviceModal');
 };
 
